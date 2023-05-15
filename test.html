@@ -24,9 +24,28 @@
     </script>
     <!-- End Matomo Code -->
 
+    //button js click event
+    <button onclick="clickEventPurchase()">Purchase</button>
+
     Test
 
-    <a href="/index.html">Home</a>
+    <a href="{{site.baseurl}}/">Home</a>
+
+    <script>
+        function clickEventPurchase() {
+            if (!_paq)
+                return;
+            // Order Array - Parameters should be generated dynamically
+            _paq.push(['trackEcommerceOrder',
+                "000123", // (Required) orderId
+                10.99, // (Required) grandTotal (revenue)
+                9.99, // (Optional) subTotal
+                1.5, // (optional) tax
+                1, // (optional) shipping
+                false // (optional) discount
+            ]);
+        }
+    </script>
 
 </body>
 </html>

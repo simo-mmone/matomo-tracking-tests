@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <script async="" src="https://analytics.dataone.online/matomo.js"></script>
     <!-- Matomo -->
     <script>
         var _paq = window._paq = window._paq || [];
@@ -22,6 +23,7 @@
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
         })();
+        _paq.push([ function() { console.log('matomo init'); }]);
     </script>
     <!-- End Matomo Code -->
 
